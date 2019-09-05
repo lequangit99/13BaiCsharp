@@ -1,0 +1,11 @@
+D:\Code C#\14BaiCsharp\Bai 2\Bai 2\bin\Debug\Bai 2.exe.config
+D:\Code C#\14BaiCsharp\Bai 2\Bai 2\bin\Debug\Bai 2.exe
+D:\Code C#\14BaiCsharp\Bai 2\Bai 2\bin\Debug\Bai 2.pdb
+D:\Code C#\14BaiCsharp\Bai 2\Bai 2\obj\Debug\Bai 2.csprojAssemblyReference.cache
+D:\Code C#\14BaiCsharp\Bai 2\Bai 2\obj\Debug\Bai_2.Properties.Resources.resources
+D:\Code C#\14BaiCsharp\Bai 2\Bai 2\obj\Debug\Bai 2.csproj.GenerateResource.cache
+D:\Code C#\14BaiCsharp\Bai 2\Bai 2\obj\Debug\Bai 2.csproj.CoreCompileInputs.cache
+D:\Code C#\14BaiCsharp\Bai 2\Bai 2\obj\Debug\Bai 2.exe
+D:\Code C#\14BaiCsharp\Bai 2\Bai 2\obj\Debug\Bai 2.pdb
+D:\Code C#\14BaiCsharp\Bai 2\Bai 2\obj\Debug\Bai_2.frmMain.resources
+D:\Code C#\14BaiCsharp\Bai 2\Bai 2\obj\Debug\Bai_2.frmSearch.resources
