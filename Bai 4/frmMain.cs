@@ -1,29 +1,20 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace Bai_4
 {
     public partial class frmMain : Form
     {
+        List<SinhVien> sinhViens = new List<SinhVien>();
         public frmMain()
         {
             InitializeComponent();
         }
 
-        private void FrmMain_Load(object sender, EventArgs e)
-        {
-
-        }
-
         private void CbName_SelectedIndexChanged(object sender, EventArgs e)
         {
+            txtDiem.Text = null;
             if (cbName.SelectedIndex != -1)
             {
                 if (cbName.SelectedIndex == 0)
@@ -55,7 +46,16 @@ namespace Bai_4
         }
         private void AddList()
         {
-
+            if (cbName.SelectedIndex != -1 && !String.IsNullOrEmpty(txtDiem.Text) && double.TryParse(txtDiem.Text, out double temp))
+            {
+                SinhVien sinhVien = new SinhVien(cbName.Text, int.Parse(txtSoTinChi.Text), double.Parse(txtDiem.Text));
+                sinhViens.Add(sinhVien);
+                listBox1.Items.Add(sinhVien.ToString());
+            }
+            else
+            {
+                MessageBox.Show("Nhập lại");
+            }
         }
         private void Exit()
         {
@@ -76,6 +76,34 @@ namespace Bai_4
                 AddList();
             }
             return base.ProcessCmdKey(ref msg, keyData);
+        }
+
+        private void BtnTinh_Click(object sender, EventArgs e)
+        {
+            if (listBox1.Items.Count != 0)
+            {
+                int tongTinChi = 0;
+                double tongDiem = 0.0;
+                foreach (var item in sinhViens)
+                {
+                    tongTinChi += item.SoTinChi;
+                    tongDiem += item.Diem * item.SoTinChi;
+
+                }
+                double diemTB = tongDiem / tongTinChi;
+                txtTongTinChi.Text = tongTinChi.ToString();
+                txtTongDiem.Text = tongDiem.ToString();
+                txtDiemTB.Text = diemTB.ToString();
+            }
+            else
+            {
+                MessageBox.Show("Thêm môn học vào");
+            }
+        }
+
+        private void BtnList_Click(object sender, EventArgs e)
+        {
+            AddList();
         }
     }
 }

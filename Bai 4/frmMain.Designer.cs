@@ -29,23 +29,23 @@
         private void InitializeComponent()
         {
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
+            this.btnList = new System.Windows.Forms.Button();
+            this.txtDiem = new System.Windows.Forms.TextBox();
+            this.txtSoTinChi = new System.Windows.Forms.TextBox();
+            this.cbName = new System.Windows.Forms.ComboBox();
             this.label3 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
+            this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.listBox1 = new System.Windows.Forms.ListBox();
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
-            this.cbName = new System.Windows.Forms.ComboBox();
-            this.txtSoTinChi = new System.Windows.Forms.TextBox();
-            this.txtDiem = new System.Windows.Forms.TextBox();
             this.txtTongTinChi = new System.Windows.Forms.TextBox();
             this.txtTongDiem = new System.Windows.Forms.TextBox();
             this.txtDiemTB = new System.Windows.Forms.TextBox();
-            this.btnList = new System.Windows.Forms.Button();
             this.btnTinh = new System.Windows.Forms.Button();
             this.btnExit = new System.Windows.Forms.Button();
-            this.listBox1 = new System.Windows.Forms.ListBox();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.SuspendLayout();
@@ -68,6 +68,74 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Thông tin môn học";
             // 
+            // btnList
+            // 
+            this.btnList.Location = new System.Drawing.Point(141, 246);
+            this.btnList.Name = "btnList";
+            this.btnList.Size = new System.Drawing.Size(118, 32);
+            this.btnList.TabIndex = 6;
+            this.btnList.Text = "Thêm vào DS";
+            this.btnList.UseVisualStyleBackColor = true;
+            this.btnList.Click += new System.EventHandler(this.BtnList_Click);
+            // 
+            // txtDiem
+            // 
+            this.txtDiem.Location = new System.Drawing.Point(141, 177);
+            this.txtDiem.Name = "txtDiem";
+            this.txtDiem.Size = new System.Drawing.Size(168, 26);
+            this.txtDiem.TabIndex = 5;
+            // 
+            // txtSoTinChi
+            // 
+            this.txtSoTinChi.Enabled = false;
+            this.txtSoTinChi.Location = new System.Drawing.Point(141, 130);
+            this.txtSoTinChi.Name = "txtSoTinChi";
+            this.txtSoTinChi.Size = new System.Drawing.Size(168, 26);
+            this.txtSoTinChi.TabIndex = 4;
+            // 
+            // cbName
+            // 
+            this.cbName.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbName.FormattingEnabled = true;
+            this.cbName.Items.AddRange(new object[] {
+            "Tin học đại cương",
+            "Giải tích F1",
+            "Tiếng Anh A0",
+            "Triết học Mác-Lê Nin",
+            "Vật lý F1"});
+            this.cbName.Location = new System.Drawing.Point(37, 74);
+            this.cbName.Name = "cbName";
+            this.cbName.Size = new System.Drawing.Size(348, 28);
+            this.cbName.TabIndex = 3;
+            this.cbName.SelectedIndexChanged += new System.EventHandler(this.CbName_SelectedIndexChanged);
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(33, 177);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(46, 20);
+            this.label3.TabIndex = 2;
+            this.label3.Text = "Điểm";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(33, 131);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(74, 20);
+            this.label2.TabIndex = 1;
+            this.label2.Text = "Số tín chỉ";
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(33, 41);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(101, 20);
+            this.label1.TabIndex = 0;
+            this.label1.Text = "Tên môn học";
+            // 
             // groupBox2
             // 
             this.groupBox2.Controls.Add(this.listBox1);
@@ -81,32 +149,14 @@
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Danh sách các môn học";
             // 
-            // label1
+            // listBox1
             // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(33, 41);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(101, 20);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "Tên môn học";
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(33, 131);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(74, 20);
-            this.label2.TabIndex = 1;
-            this.label2.Text = "Số tín chỉ";
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(33, 177);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(46, 20);
-            this.label3.TabIndex = 2;
-            this.label3.Text = "Điểm";
+            this.listBox1.FormattingEnabled = true;
+            this.listBox1.ItemHeight = 20;
+            this.listBox1.Location = new System.Drawing.Point(8, 28);
+            this.listBox1.Name = "listBox1";
+            this.listBox1.Size = new System.Drawing.Size(558, 244);
+            this.listBox1.TabIndex = 0;
             // 
             // label4
             // 
@@ -136,38 +186,9 @@
             this.label6.TabIndex = 5;
             this.label6.Text = "Điểm trung bình";
             // 
-            // cbName
-            // 
-            this.cbName.FormattingEnabled = true;
-            this.cbName.Items.AddRange(new object[] {
-            "Tin học đại cương",
-            "Giải tích F1",
-            "Tiếng Anh A0",
-            "Triết học Mác-Lê Nin",
-            "Vật lý F1"});
-            this.cbName.Location = new System.Drawing.Point(37, 74);
-            this.cbName.Name = "cbName";
-            this.cbName.Size = new System.Drawing.Size(348, 28);
-            this.cbName.TabIndex = 3;
-            this.cbName.SelectedIndexChanged += new System.EventHandler(this.CbName_SelectedIndexChanged);
-            // 
-            // txtSoTinChi
-            // 
-            this.txtSoTinChi.Enabled = false;
-            this.txtSoTinChi.Location = new System.Drawing.Point(141, 130);
-            this.txtSoTinChi.Name = "txtSoTinChi";
-            this.txtSoTinChi.Size = new System.Drawing.Size(168, 26);
-            this.txtSoTinChi.TabIndex = 4;
-            // 
-            // txtDiem
-            // 
-            this.txtDiem.Location = new System.Drawing.Point(141, 177);
-            this.txtDiem.Name = "txtDiem";
-            this.txtDiem.Size = new System.Drawing.Size(168, 26);
-            this.txtDiem.TabIndex = 5;
-            // 
             // txtTongTinChi
             // 
+            this.txtTongTinChi.Enabled = false;
             this.txtTongTinChi.Location = new System.Drawing.Point(515, 306);
             this.txtTongTinChi.Name = "txtTongTinChi";
             this.txtTongTinChi.Size = new System.Drawing.Size(146, 26);
@@ -175,6 +196,7 @@
             // 
             // txtTongDiem
             // 
+            this.txtTongDiem.Enabled = false;
             this.txtTongDiem.Location = new System.Drawing.Point(804, 306);
             this.txtTongDiem.Name = "txtTongDiem";
             this.txtTongDiem.Size = new System.Drawing.Size(100, 26);
@@ -182,19 +204,11 @@
             // 
             // txtDiemTB
             // 
+            this.txtDiemTB.Enabled = false;
             this.txtDiemTB.Location = new System.Drawing.Point(561, 351);
             this.txtDiemTB.Name = "txtDiemTB";
             this.txtDiemTB.Size = new System.Drawing.Size(100, 26);
             this.txtDiemTB.TabIndex = 8;
-            // 
-            // btnList
-            // 
-            this.btnList.Location = new System.Drawing.Point(141, 246);
-            this.btnList.Name = "btnList";
-            this.btnList.Size = new System.Drawing.Size(118, 32);
-            this.btnList.TabIndex = 6;
-            this.btnList.Text = "Thêm vào DS";
-            this.btnList.UseVisualStyleBackColor = true;
             // 
             // btnTinh
             // 
@@ -204,6 +218,7 @@
             this.btnTinh.TabIndex = 7;
             this.btnTinh.Text = "Tính";
             this.btnTinh.UseVisualStyleBackColor = true;
+            this.btnTinh.Click += new System.EventHandler(this.BtnTinh_Click);
             // 
             // btnExit
             // 
@@ -214,15 +229,6 @@
             this.btnExit.Text = "Thoát";
             this.btnExit.UseVisualStyleBackColor = true;
             this.btnExit.Click += new System.EventHandler(this.BtnExit_Click);
-            // 
-            // listBox1
-            // 
-            this.listBox1.FormattingEnabled = true;
-            this.listBox1.ItemHeight = 20;
-            this.listBox1.Location = new System.Drawing.Point(8, 28);
-            this.listBox1.Name = "listBox1";
-            this.listBox1.Size = new System.Drawing.Size(558, 244);
-            this.listBox1.TabIndex = 0;
             // 
             // frmMain
             // 
@@ -243,7 +249,6 @@
             this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Name = "frmMain";
             this.Text = "Tính điểm trung bình";
-            this.Load += new System.EventHandler(this.FrmMain_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.groupBox2.ResumeLayout(false);

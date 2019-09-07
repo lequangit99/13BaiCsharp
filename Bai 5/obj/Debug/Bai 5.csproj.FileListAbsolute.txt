@@ -1,0 +1,10 @@
+D:\Code C#\13BaiCsharp\Bai 5\bin\Debug\Bai 5.exe.config
+D:\Code C#\13BaiCsharp\Bai 5\bin\Debug\Bai 5.exe
+D:\Code C#\13BaiCsharp\Bai 5\bin\Debug\Bai 5.pdb
+D:\Code C#\13BaiCsharp\Bai 5\obj\Debug\Bai 5.csprojAssemblyReference.cache
+D:\Code C#\13BaiCsharp\Bai 5\obj\Debug\Bai_5.Properties.Resources.resources
+D:\Code C#\13BaiCsharp\Bai 5\obj\Debug\Bai 5.csproj.GenerateResource.cache
+D:\Code C#\13BaiCsharp\Bai 5\obj\Debug\Bai 5.csproj.CoreCompileInputs.cache
+D:\Code C#\13BaiCsharp\Bai 5\obj\Debug\Bai 5.exe
+D:\Code C#\13BaiCsharp\Bai 5\obj\Debug\Bai 5.pdb
+D:\Code C#\13BaiCsharp\Bai 5\obj\Debug\Bai_5.frmMain.resources
