@@ -1,11 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace Bai_8
@@ -33,7 +27,7 @@ namespace Bai_8
 
         private void addList()
         {
-            if (int.TryParse(txtAdd.Text,out int temp))
+            if (int.TryParse(txtAdd.Text, out int temp))
             {
                 listNumber.Add(temp);
                 listBox1.Items.Add(temp);
@@ -52,19 +46,19 @@ namespace Bai_8
 
         private void RList()
         {
-                if (listBox1.SelectedIndex!=-1)
+            if (listBox1.SelectedIndex != -1)
+            {
+                if (MessageBox.Show("Bạn có muốn xoá không?", "Thông báo", MessageBoxButtons.YesNo, MessageBoxIcon.Warning)
+                == DialogResult.Yes)
                 {
-                    if (MessageBox.Show("Bạn có muốn xoá không?", "Thông báo", MessageBoxButtons.YesNo, MessageBoxIcon.Warning)
-                    == DialogResult.Yes)
-                    {
-                        listNumber.RemoveAt(listBox1.SelectedIndex);
-                        listBox1.Items.RemoveAt(listBox1.SelectedIndex);
-                    }
+                    listNumber.RemoveAt(listBox1.SelectedIndex);
+                    listBox1.Items.RemoveAt(listBox1.SelectedIndex);
                 }
-                else
-                {
-                    MessageBox.Show("Bạn phải chọn phần tử để xoá");
-                }
+            }
+            else
+            {
+                MessageBox.Show("Bạn phải chọn phần tử để xoá");
+            }
 
         }
         private void BtnRemove_Click(object sender, EventArgs e)
@@ -110,7 +104,7 @@ namespace Bai_8
         }
         protected override bool ProcessCmdKey(ref Message msg, Keys keyData)
         {
-            if (keyData == (Keys.Alt|Keys.H))
+            if (keyData == (Keys.Alt | Keys.H))
             {
                 Exit();
             }

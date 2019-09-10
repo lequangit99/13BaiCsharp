@@ -1,11 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace Bai_7
@@ -80,17 +74,17 @@ namespace Bai_7
 
         private void CbChucNang_SelectedIndexChanged(object sender, EventArgs e)
         {
-            lbKetQua.Visible = true ;
-            if (cbChucNang.SelectedIndex==0)
+            lbKetQua.Visible = true;
+            if (cbChucNang.SelectedIndex == 0)
             {
-                lbKetQua.Text = "Trung bình cộng của dãy là " + (Convert.ToDouble(StaticData.listNumber.Sum())/StaticData.listNumber.Count);
+                lbKetQua.Text = "Trung bình cộng của dãy là " + (Convert.ToDouble(StaticData.listNumber.Sum()) / StaticData.listNumber.Count);
             }
-            if (cbChucNang.SelectedIndex==1)
+            if (cbChucNang.SelectedIndex == 1)
             {
                 int temp = 0;
                 foreach (var item in StaticData.listNumber)
                 {
-                    if (item<0)
+                    if (item < 0)
                     {
                         temp++;
                     }

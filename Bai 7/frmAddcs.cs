@@ -1,11 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace Bai_7
@@ -25,7 +18,7 @@ namespace Bai_7
         private void addList()
         {
             StaticData.listNumber.Add(int.Parse(txtPhanTu.Text));
-            if (StaticData.listNumber.Count==length)
+            if (StaticData.listNumber.Count == length)
             {
                 this.Close();
             }
@@ -33,7 +26,7 @@ namespace Bai_7
 
         private void BtnAdd_Click(object sender, EventArgs e)
         {
-            if (!String.IsNullOrEmpty(txtPhanTu.Text)&&int.TryParse(txtPhanTu.Text,out int temp))
+            if (!String.IsNullOrEmpty(txtPhanTu.Text) && int.TryParse(txtPhanTu.Text, out int temp))
             {
                 addList();
                 txtPhanTu.Text = null;

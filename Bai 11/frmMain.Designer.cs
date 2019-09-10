@@ -89,7 +89,8 @@
             "Arial",
             "Consolas",
             "Microsoft Sans Serif",
-            "Source Code Pro"});
+            "Source Code Pro",
+            "Times New Roman"});
             this.cbFont.Location = new System.Drawing.Point(194, 29);
             this.cbFont.Name = "cbFont";
             this.cbFont.Size = new System.Drawing.Size(265, 28);
@@ -233,9 +234,11 @@
             this.btnExit.TabIndex = 4;
             this.btnExit.Text = "Thoát";
             this.btnExit.UseVisualStyleBackColor = true;
+            this.btnExit.Click += new System.EventHandler(this.BtnExit_Click);
             // 
             // txtTEXT
             // 
+            this.txtTEXT.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtTEXT.Location = new System.Drawing.Point(154, 22);
             this.txtTEXT.Multiline = true;
             this.txtTEXT.Name = "txtTEXT";
@@ -258,7 +261,6 @@
             this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Name = "frmMain";
             this.Text = "Form1";
-            this.Load += new System.EventHandler(this.FrmMain_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.groupBox2.ResumeLayout(false);

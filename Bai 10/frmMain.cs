@@ -47,8 +47,8 @@ namespace Bai_10
         }
         private void giaiPTB1()
         {
-            if (!String.IsNullOrEmpty(txtA.Text)&& !String.IsNullOrEmpty(txtB.Text)
-                &&double.TryParse(txtA.Text,out double a)&& double.TryParse(txtB.Text, out double b))
+            if (!String.IsNullOrEmpty(txtA.Text) && !String.IsNullOrEmpty(txtB.Text)
+                && double.TryParse(txtA.Text, out double a) && double.TryParse(txtB.Text, out double b))
             {
                 if (a == 0)
                 {
@@ -63,7 +63,7 @@ namespace Bai_10
                 }
                 else
                 {
-                    txtKetQua.Text = "Nghiệm của phương trình là: " + Math.Round(Convert.ToDouble(-b / a),2);
+                    txtKetQua.Text = "Nghiệm của phương trình là: " + Math.Round(Convert.ToDouble(-b / a), 2);
                 }
             }
             else
@@ -117,7 +117,7 @@ namespace Bai_10
         }
         protected override bool ProcessCmdKey(ref Message msg, Keys keyData)
         {
-            if (keyData==(Keys.Alt|Keys.T))
+            if (keyData == (Keys.Alt | Keys.T))
             {
                 Exit();
             }

@@ -39,7 +39,7 @@ namespace Bai_2
             if (!String.IsNullOrEmpty(txtCode.Text) && !String.IsNullOrEmpty(txtAddress.Text) &&
                 !String.IsNullOrEmpty(txtName.Text) && !String.IsNullOrEmpty(txtDeposits.Text) &&
                 !String.IsNullOrEmpty(cbMonth.Text) && !String.IsNullOrEmpty(dtDateTime.Text) &&
-                txtCode.TextLength ==6)
+                txtCode.TextLength == 6)
             {
                 List<KhachHang> listKhachHangs = new List<KhachHang>();
                 KhachHang khachHang = new KhachHang(txtCode.Text, txtName.Text, txtAddress.Text, int.Parse(txtDeposits.Text),
@@ -58,7 +58,7 @@ namespace Bai_2
         /// </summary>
         private void Exit()
         {
-            if (MessageBox.Show("Bạn có muốn thoát không?","Thông báo",MessageBoxButtons.YesNo,MessageBoxIcon.Warning)
+            if (MessageBox.Show("Bạn có muốn thoát không?", "Thông báo", MessageBoxButtons.YesNo, MessageBoxIcon.Warning)
                 == DialogResult.Yes)
             {
                 Application.Exit();
@@ -87,7 +87,7 @@ namespace Bai_2
             {
                 Exit();
             }
-            if (keyData==(Keys.Alt|Keys.T))
+            if (keyData == (Keys.Alt | Keys.T))
             {
                 AddList();
             }

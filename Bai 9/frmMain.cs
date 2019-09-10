@@ -86,7 +86,7 @@ namespace Bai_9
 
         private void RBook()
         {
-            if (listBox1.SelectedIndex!=-1)
+            if (listBox1.SelectedIndex != -1)
             {
                 if (MessageBox.Show("Bạn có muốn xoá không?", "Thông báo", MessageBoxButtons.YesNo, MessageBoxIcon.Warning)
             == DialogResult.Yes)

@@ -1,10 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace Bai_2
+﻿namespace Bai_2
 {
     class KhachHang
     {
@@ -29,7 +23,7 @@ namespace Bai_2
             this.month = month;
             this.type = type;
         }
-        
+
 
         public string Code { get => code; set => code = value; }
         public string Name { get => name; set => name = value; }

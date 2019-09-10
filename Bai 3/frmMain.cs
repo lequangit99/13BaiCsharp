@@ -50,8 +50,8 @@ namespace Bai_3
                 cbDoUong.SelectedIndex != -1 && cbSoLuong.SelectedIndex != -1)
             {
                 List<KhachHang> khachHangs = new List<KhachHang>();
-                KhachHang khachHang = new KhachHang(txtName.Text,thoiGianThue,int.Parse(txtPriceShip.Text),
-                    cbDoUong.Text,int.Parse(cbSoLuong.Text),double.Parse(txtPriceDrink.Text));
+                KhachHang khachHang = new KhachHang(txtName.Text, thoiGianThue, int.Parse(txtPriceShip.Text),
+                    cbDoUong.Text, int.Parse(cbSoLuong.Text), double.Parse(txtPriceDrink.Text));
                 khachHangs.Add(khachHang);
                 listBox1.Items.Add(khachHang.ToString());
                 StaticData.khachHangs = khachHangs;
