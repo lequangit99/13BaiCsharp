@@ -195,5 +195,13 @@ namespace Bai_5
             }
             return base.ProcessCmdKey(ref msg, keyData);
         }
+
+        private void TxtNumber_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!Char.IsDigit(e.KeyChar)&&!Char.IsControl(e.KeyChar))
+            {
+                e.Handled = true;
+            }
+        }
     }
 }
